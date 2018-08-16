@@ -10,24 +10,28 @@ namespace PracticaObjetos
     {
         static void Main(string[] args)
         {
-            //Declaración de variable
-            Persona persona1;
-            //Creación de instancia, alojamiento en memoria
-            persona1 = new Persona();
-            persona1.nombre = "juan";
-            persona1.apellidos = "Locote";
-            persona1.edad = 20;
-            persona1.altura = 1.70f;
+            Contacto contacto1 = new Contacto();
 
-            Console.WriteLine(persona1.nombre + " " + persona1.apellidos + " tiene " + persona1.edad + " años");
+            contacto1.Nombre = "pedro lopez";
+            contacto1.TelefonoCasa = "(644) 115 - 2514";
+            contacto1.Direccion = "Guerrero 454";
 
-            persona1.cumplirAños();
-            Console.WriteLine("Ahora " + persona1.nombre + " " + persona1.apellidos + " tiene " + persona1.edad + " años");
-            //Imprimir su altura
-            Console.WriteLine(persona1.nombre + " Mide: " + persona1.altura);
-            persona1.crecimiento(0.12f);
-            Console.WriteLine(persona1.altura + " ahora mide  ");
+            Console.WriteLine("Nombre: " + contacto1.Nombre);
+            Console.WriteLine("Telefono de casa: " + contacto1.TelefonoCasa);
+
+            Contacto contacto2 = new Contacto("Juan Perez");
+            Console.WriteLine("Contacto 2 ");
+            Console.WriteLine("Nombre: " + contacto2.Nombre);
+
+            Contacto contacto3 = new Contacto("Maria la que no queria", "9281239181", "1231245124", "5 de febrero 890", "Marial1id@correoreal.com");
+            Console.WriteLine("Nombre: " + contacto3.Nombre);
+            Console.WriteLine("Celular: " + contacto3.TelefonoCelular);
+            Console.WriteLine("Casa: " + contacto3.TelefonoCasa);
+            Console.WriteLine("Dirección: " + contacto3.Direccion);
+            Console.WriteLine("Correo: " + contacto3.CorreoElectronico);
+
             Console.ReadLine();
+            
         }
     }
 }
